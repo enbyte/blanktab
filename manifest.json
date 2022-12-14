@@ -1,0 +1,10 @@
+{
+  "name": "Blank Tab Title",
+  "description": "Automatically changes the tab title to 'blank' whenever the user visits a new webpage.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["activeTab", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
