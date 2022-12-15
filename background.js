@@ -1,7 +1,14 @@
+function setblank() {
+  document.title = 'blank';
+}
+
+
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  if (1 == 1) {
-    chrome.tabs.executeScript(null, {code:"document.title='blank'"});
-  }
+  chrome.scripting.executeScript({
+    target: {tabId: tabId},
+    func: setblank,
+    args: [],
+  })
 });
 
 

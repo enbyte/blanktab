@@ -1,10 +1,13 @@
 {
-  "name": "Blank Tab Title",
-  "description": "Automatically changes the tab title to 'blank' whenever the user visits a new webpage.",
+  "name": "enbyte's site unblocker",
+  "description": "Gets around impero site blocking, quick and easy.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "<all_urls>"],
+  "permissions": ["activeTab", "scripting"],
   "background": {
-    "scripts": ["background.js"]
-  }
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
 }
